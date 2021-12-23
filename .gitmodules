@@ -1,0 +1,31 @@
+[submodule "Tweaks/YTAutoFullScreen"]
+	path = Tweaks/YTAutoFullScreen
+	url = git@github.com:PoomSmart/YTAutoFullScreen
+[submodule "Tweaks/YTSideloadFix"]
+	path = Tweaks/YTSideloadFix
+	url = git@github.com:jawshoeadan/YTSideloadFix
+[submodule "Tweaks/YTNoShorts"]
+	path = Tweaks/YTNoShorts
+	url = git@github.com:MIrO92/YTNoShorts
+[submodule "Tweaks/PSPrefs"]
+	path = Tweaks/PSPrefs
+	url = git@github.com:PoomSmart/PSPrefs
+[submodule "Tweaks/PSHeader"]
+	path = Tweaks/PSHeader
+	url = git@github.com:PoomSmart/PSHeader
+[submodule "Tweaks/YouAreThere"]
+	path = Tweaks/YouAreThere
+	url = git@github.com:PoomSmart/YouAreThere
+[submodule "Tweaks/NoYTPremium"]
+	path = Tweaks/NoYTPremium
+	url = git@github.com:PoomSmart/NoYTPremium
+[submodule "Tweaks/iSponsorBlock"]
+	path = Tweaks/iSponsorBlock
+	url = git@github.com:bakedpotato191/iSponsorBlock
+	branch = fixes
+[submodule "Tweaks/YouTubeHeader"]
+	path = Tweaks/YouTubeHeader
+	url = git@github.com:PoomSmart/YouTubeHeader
+[submodule "Tweaks/YouPiP"]
+	path = Tweaks/YouPiP
+	url = git@github.com:PoomSmart/YouPiP

@@ -1,0 +1,122 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Alderis
+@_exported import Alderis
+import CoreServices
+import Swift
+import UIKit
+import _Concurrency
+public protocol ColorPropertyListValue {
+}
+extension Swift.String : Alderis.ColorPropertyListValue {
+}
+extension Swift.Array : Alderis.ColorPropertyListValue where Element : Swift.FixedWidthInteger {
+}
+extension UIKit.UIColor {
+  @nonobjc public convenience init?(propertyListValue: Alderis.ColorPropertyListValue?)
+  @objc(initWithHbcp_propertyListValue:) dynamic public convenience init?(_propertyListValueObjC propertyListValue: Any?)
+  @objc(hbcp_propertyListValue) dynamic public var propertyListValue: Swift.String {
+    @objc get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(HBColorWell) @_Concurrency.MainActor(unsafe) open class ColorWell : UIKit.UIControl {
+  @objc @_Concurrency.MainActor(unsafe) open var color: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isDragInteractionEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var isDropInteractionEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func addTarget(_ target: Any?, action: ObjectiveC.Selector, for controlEvents: UIKit.UIControl.Event)
+  @available(iOS 14, macCatalyst 14, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func addAction(_ action: UIKit.UIAction, for controlEvents: UIKit.UIControl.Event)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func removeTarget(_ target: Any?, action: ObjectiveC.Selector?, for controlEvents: UIKit.UIControl.Event)
+  @available(iOS 14, macCatalyst 14, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func removeAction(_ action: UIKit.UIAction, for controlEvents: UIKit.UIControl.Event)
+  @available(iOS 14, macCatalyst 14, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func removeAction(identifiedBy actionIdentifier: UIKit.UIAction.Identifier, for controlEvents: UIKit.UIControl.Event)
+  @objc deinit
+}
+extension Alderis.ColorWell : UIKit.UIDragInteractionDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dragInteraction(_ interaction: UIKit.UIDragInteraction, itemsForBeginning session: UIKit.UIDragSession) -> [UIKit.UIDragItem]
+}
+extension Alderis.ColorWell : UIKit.UIDropInteractionDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dropInteraction(_ interaction: UIKit.UIDropInteraction, canHandle session: UIKit.UIDropSession) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dropInteraction(_ interaction: UIKit.UIDropInteraction, sessionDidUpdate session: UIKit.UIDropSession) -> UIKit.UIDropProposal
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func dropInteraction(_ interaction: UIKit.UIDropInteraction, performDrop session: UIKit.UIDropSession)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, deprecated, renamed: "ColorWell")
+@objc(HBColorPickerCircleView) @_Concurrency.MainActor(unsafe) open class ColorPickerCircleView : Alderis.ColorWell {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(HBColorPickerViewController) @_Concurrency.MainActor(unsafe) open class ColorPickerViewController : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) public init(configuration: Alderis.ColorPickerConfiguration)
+  @objc @_Concurrency.MainActor(unsafe) weak open var delegate: Alderis.ColorPickerDelegate? {
+    @objc get
+    @objc set(value)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var configuration: Alderis.ColorPickerConfiguration!
+  @available(*, deprecated, message: "Use ColorPickerConfiguration instead")
+  @objc @_Concurrency.MainActor(unsafe) open var overrideSmartInvert: Swift.Bool
+  @available(*, deprecated, message: "Use ColorPickerConfiguration instead")
+  @objc @_Concurrency.MainActor(unsafe) open var color: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewSafeAreaInsetsDidChange()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func preferredContentSizeDidChange(forChildContentContainer container: UIKit.UIContentContainer)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+@objc(HBColorPickerTab) public enum ColorPickerTab : Swift.Int, Swift.CaseIterable {
+  case swatch = 0
+  case map = 1
+  case sliders = 2
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [Alderis.ColorPickerTab]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [Alderis.ColorPickerTab] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(HBColorPickerConfiguration) open class ColorPickerConfiguration : ObjectiveC.NSObject {
+  @objc public init(color: UIKit.UIColor)
+  @objc open var color: UIKit.UIColor
+  @objc open var supportsAlpha: Swift.Bool
+  @objc open var title: Swift.String?
+  @objc open var initialTab: Alderis.ColorPickerTab
+  @nonobjc open var visibleTabs: [Alderis.ColorPickerTab]
+  @objc(visibleTabs) open var _visibleTabsObjC: [Alderis.ColorPickerTab.RawValue] {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc open var showTabs: Swift.Bool
+  @objc open var overrideSmartInvert: Swift.Bool
+  @objc open var isDropInteractionEnabled: Swift.Bool
+  @objc deinit
+}
+@objc(HBColorPickerDelegate) public protocol ColorPickerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc(colorPicker:didSelectColor:) optional func colorPicker(_ colorPicker: Alderis.ColorPickerViewController, didSelect color: UIKit.UIColor)
+  @objc(colorPicker:didAcceptColor:) optional func colorPicker(_ colorPicker: Alderis.ColorPickerViewController, didAccept color: UIKit.UIColor)
+  @objc(colorPickerDidCancel:) optional func colorPickerDidCancel(_ colorPicker: Alderis.ColorPickerViewController)
+}
